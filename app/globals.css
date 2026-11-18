@@ -33,3 +33,35 @@ button:focus-visible{outline:3px solid #fff;outline-offset:2px}
 .done{padding:80px 0;max-width:560px}
 .done h1{font-size:2.6rem;margin-bottom:12px}
 a{color:var(--teal)}
+
+.site-header{background:var(--paper);padding:0;border-bottom:1px solid var(--line)}
+.site-nav,.nav-links{display:flex;align-items:center;justify-content:space-between;gap:clamp(.75rem,3vw,1.5rem)}
+.site-nav{min-height:68px}
+.site-nav a,.action,.service-link,.back-link{text-decoration:none}
+.site-nav a{color:var(--ink)}
+.wordmark{font-size:1.35rem;letter-spacing:-.05em}
+.wordmark span{color:var(--teal)}
+.nav-links{font-size:.9rem}
+.nav-book{border:1px solid var(--line);border-radius:8px;padding:.45rem .7rem}
+.landing-hero{background:linear-gradient(120deg,#14201f 35%,#164e43);color:var(--paper)}
+.landing-hero-inner{padding-block:clamp(3rem,9vw,7rem)}
+.eyebrow{color:var(--lime);font-size:.85rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.landing-hero h1{font-size:clamp(2.65rem,8vw,6rem);letter-spacing:-.045em}
+.landing-intro{max-width:47ch;color:#c8d6d1;font-size:1.1rem;margin:1.25rem 0 2rem}
+.action{display:inline-flex;align-items:center;gap:1.5rem;background:var(--lime);color:var(--ink);padding:.85rem 1.1rem;border-radius:8px;font-weight:800}
+.services{padding-block:clamp(2.75rem,6vw,5rem);scroll-margin-top:1rem}
+.services h2{font-size:clamp(2rem,5vw,3rem)}
+.services>p,.service-card p{color:var(--muted)}
+.service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1.75rem}
+.service-card{display:flex;flex-direction:column;align-items:flex-start;padding:1.4rem;background:var(--paper);border:1px solid var(--line);border-radius:14px}
+.service-card h3{margin:0;font-size:1.25rem}
+.service-card p{margin:.5rem 0 1.25rem}
+.service-price{margin-top:auto}
+.service-price strong{font-size:1.45rem}
+.service-link{display:flex;align-items:center;justify-content:space-between;gap:.5rem;width:100%;border-top:1px solid var(--line);margin-top:1rem;padding-top:1rem;font-weight:700}
+.site-nav a:hover,.service-link:hover,.back-link:hover{text-decoration:underline}
+a:focus-visible{outline:3px solid var(--teal);outline-offset:4px}
+.landing-hero a:focus-visible{outline-color:var(--paper)}
+.back-link{display:inline-block;margin-top:1.5rem;font-weight:700}
+@media(max-width:860px){.summary{position:static}}
+@media(max-width:680px){.service-grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}}

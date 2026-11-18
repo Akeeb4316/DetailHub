@@ -30,7 +30,7 @@ export async function POST(req: Request) {
       name: String(b.name), phone: String(b.phone),
     },
     success_url: `${site}/success`,
-    cancel_url: `${site}/`,
+    cancel_url: `${site}/book?service=${encodeURIComponent(quote.s.id)}`,
   });
   return NextResponse.json({ url: session.url });
 }

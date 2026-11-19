@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { SERVICES, SIZES, ADDONS, priceFor } from "../../lib";
 
-export default function BookingForm({ initialService }: { initialService: string }) {
+export default function BookingForm({ initialService, name, email }: { initialService: string; name: string; email: string }) {
   const [service, setService] = useState(initialService);
   const [size, setSize] = useState("sedan");
   const [addons, setAddons] = useState<string[]>([]);
@@ -87,9 +87,9 @@ export default function BookingForm({ initialService }: { initialService: string
           </fieldset>
           <fieldset>
             <legend>Your details</legend>
-            <label className="f">Full name<input type="text" name="name" autoComplete="name" required /></label>
+            <label className="f">Full name<input type="text" name="name" autoComplete="name" defaultValue={name} required /></label>
             <div className="row">
-              <label className="f">Email<input type="email" name="email" autoComplete="email" required /></label>
+              <label className="f">Email<input type="email" name="email" autoComplete="email" value={email} readOnly /></label>
               <label className="f">Phone<input type="tel" name="phone" autoComplete="tel" required /></label>
             </div>
           </fieldset>
